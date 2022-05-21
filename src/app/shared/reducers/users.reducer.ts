@@ -3,7 +3,7 @@ import { usersList } from 'src/app/shared/state/actions/users.actions';
 
 export const initialState = [];
 
-export const userReducer = createReducer(
+export const usersReducer = createReducer(
   initialState,
   on(usersList, (state, { users }) => users)
 );

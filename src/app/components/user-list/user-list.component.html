@@ -1,6 +1,17 @@
-<div class="user" *ngFor="let user of users">
+<ion-content>
+  <ion-list>
+    <div *ngFor="let user of users ;let index = index">
+      <ion-item (click)="goToDetails(index)" class="user-item">
+        <ion-avatar slot="start">
+          <img src="{{user?.avatar_url}}">
+        </ion-avatar>
+        <ion-label [color]="user.public_repos > 2 ? 'danger' : ''">{{user.login}}</ion-label>
+      </ion-item>
+    </div>
+  </ion-list>
 
-  <div class="book__column">
-    <h2>{{user.id}}</h2>
-  </div>
-</div>
+  <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
+    <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading more data...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>

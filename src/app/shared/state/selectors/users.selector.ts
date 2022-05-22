@@ -1,7 +1,10 @@
-import { createSelector, createFeatureSelector } from '@ngrx/store';
+import { createSelector, createFeatureSelector } from '@ngrx/store'; 
 
-export const selectUsers = createFeatureSelector<[]>('users');
+export const selectUserState = createFeatureSelector<any>('users');
 
-export const selectUsersData = createSelector(selectUsers, (users) =>
-  users?.map((items) => items)
+
+
+export const selectUsers = createSelector(
+  selectUserState,
+  (users) => users.map((items) => items.users)
 );

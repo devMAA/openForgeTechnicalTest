@@ -6,9 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user-item.component.scss'],
 })
 export class UserItemComponent implements OnInit {
-
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {}
 
+  searchByName(value?: any) {
+    console.log(value);
+  }
 }

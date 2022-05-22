@@ -1,3 +1,8 @@
-<p>
-  user-item works!
-</p>
+<ion-content>
+  <ion-toolbar>
+    <ion-searchbar showCancelButton searchIcon="search" animated (search)="searchByName($event.target.value)"
+      placeholder="Name..."></ion-searchbar>
+  </ion-toolbar>
+  <app-user-overview></app-user-overview>
+  <app-user-item-details></app-user-item-details>
+</ion-content>

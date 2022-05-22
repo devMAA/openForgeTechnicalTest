@@ -1,0 +1,23 @@
+<ion-content>
+  <ion-item class="user-item">
+    <ion-avatar slot="start">
+      <img src="{{user?.avatar_url}}">
+    </ion-avatar>
+    <ion-label>{{user.login}}</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label>{{user.name}} / {{user}}</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label>{{user.bio}}</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label>{{user.company}}</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label>{{user.location}}</ion-label>
+  </ion-item>
+  <ion-item (click)="goToBlog(user.blog)">
+    <ion-label>{{user.blog}}</ion-label>
+  </ion-item>
+</ion-content>

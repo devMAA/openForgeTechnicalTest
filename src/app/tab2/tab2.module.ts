@@ -4,20 +4,21 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Tab2Page } from './tab2.page';
-import { ExploreContainerComponentModule } from '../explore-container/explore-container.module';
 
 import { Tab2PageRoutingModule } from './tab2-routing.module';
-import { UserItemComponent } from '../components/user-item/user-item.component';
-import { UserItemComponentModule } from '../components/user-item/user-item.module';
+import { UserItemComponentModule } from 'src/app/components/user-item/user-item.module';
+import { UserOverviewComponentModule } from 'src/app/components/user-overview/user-overview.module';
+import { UserItemDetailsComponentModule } from 'src/app/components/user-item-details/user-item-details.module';
 
 @NgModule({
   imports: [
     IonicModule,
     CommonModule,
     FormsModule,
-    ExploreContainerComponentModule,
     Tab2PageRoutingModule,
     UserItemComponentModule,
+    UserOverviewComponentModule,
+    UserItemDetailsComponentModule,
   ],
   declarations: [Tab2Page],
 })

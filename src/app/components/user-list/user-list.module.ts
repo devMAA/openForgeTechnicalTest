@@ -4,9 +4,16 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 import { UserListComponent } from './user-list.component';
+import { UserOverviewComponentModule } from 'src/app/components/user-overview/user-overview.module';
 
 @NgModule({
-  imports: [CommonModule, FormsModule, IonicModule],
+  imports: [
+    CommonModule,
+    FormsModule,
+    IonicModule,
+    UserOverviewComponentModule,
+    //UserItemDetailsComponentModule,
+  ],
   declarations: [UserListComponent],
   exports: [UserListComponent],
 })

@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { combineLatest } from 'rxjs';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-tab2',
@@ -8,10 +7,7 @@ import { combineLatest } from 'rxjs';
   styleUrls: ['tab2.page.scss'],
 })
 export class Tab2Page {
-  hello: string;
   constructor(private router: ActivatedRoute) {}
 
-  ngOninit() {
-    console.log('zzzz', this.router.snapshot.params.id);
-  }
+  ngOninit() {}
 }
